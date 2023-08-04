@@ -18,7 +18,7 @@ criaCarrinho()
 
 function criaCarrinho() {
     cart.innerHTML = `
-        <div id="cart-class" class="hidden bg-white absolute w-96 m-4 h-60 z-40 rounded-xl shadow-2xl">
+        <div id="cart-class" class="hidden bg-white absolute w-4/5 m-6 h-60 z-40 rounded-xl shadow-2xl">
           <h3 class="font-bold ml-6 my-4">Cart</h3>
           <div class="flex justify-center">
           <h4 class="font-bold mt-16 text-darkgblue">Your cart is empty.</h4>
@@ -70,15 +70,15 @@ function adicionaAoCarrinho() {
     totalPrice = quantidade * 125
 
     cart.innerHTML = `
-    <div id="cart-class" class="bg-white absolute w-96 m-4 h-60 z-40 rounded-xl shadow-2xl">
+    <div id="cart-class" class="bg-white absolute w-4/5 m-6 h-60 z-40 rounded-xl shadow-2xl">
           <h3 class="font-bold ml-6 my-4">Cart</h3>
-          <div class="flex justify-center gap-4 mt-10">
-            <img class="w-12 rounded" src="images/image-product-1-thumbnail.jpg" alt="">
-            <div>
+          <div class="flex justify-center gap-3 mt-10">
+            <img class="w-10 rounded" src="images/image-product-1-thumbnail.jpg" alt="">
+            <div class="text-sm">
               <p class="text-darkgblue font-semibold">Fall Limited Edition Sneakers</p>
-              <p class="text-darkgblue">$125.00 x ${quantidade} <span class="font-bold">$${totalPrice}.00</span></p>
+              <p class="text-darkgblue">$125.00 x ${quantidade} <span class="font-bold text-black">$${totalPrice}.00</span></p>
             </div>
-            <img id="delete" class="self-center mr-3 ml-6" src="images/icon-delete.svg" alt="trash">
+            <img id="delete" class="self-center" src="images/icon-delete.svg" alt="trash">
           </div>
           <div class="flex justify-center">
             <button class="bg-corange text-white font-semibold w-full mx-6
@@ -95,7 +95,7 @@ function pegaElementosNovos() {
 
     deleteTrash.addEventListener('click', () => {
         cart.innerHTML = `
-        <div id="cart-class" class="bg-white absolute w-96 m-4 h-60 z-40 rounded-xl shadow-2xl">
+        <div id="cart-class" class="bg-white absolute w-4/5 m-6 h-60 z-40 rounded-xl shadow-2xl">
           <h3 class="font-bold ml-6 my-4">Cart</h3>
           <div class="flex justify-center">
           <h4 class="font-bold mt-16 text-darkgblue">Your cart is empty.</h4>
