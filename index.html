@@ -29,22 +29,36 @@
 </head>
 
 <body>
-  <header class="flex justify-between m-6 itens-center">
+  <header class="flex justify-between m-6 itens-center z-60">
     <div class="flex">
-      <img class="w-4 h-4 mr-5 self-center" src="images/icon-menu.svg" alt="menu">
+      <img id="icon-menu" class="w-4 h-4 mr-5 self-center" src="images/icon-menu.svg" alt="menu">
       <img class="w-32 h-5 self-center" src="images/logo.svg" alt="logo">
     </div>
     <div class="flex">
-      <img class="w-5 h-5 self-center" src="images/icon-cart.svg" alt="cart">
+      <img id="icon-cart" class="w-5 h-5 self-center" src="images/icon-cart.svg" alt="cart">
       <img class="w-6 ml-6 self-center" src="images/image-avatar.png" alt="profile">
     </div>
   </header>
 
   <main class="">
+    <div id="menu" class="bg-white shadow-xl w-2/3 h-full fixed z-50 top-0 hidden">
+      <img id="close" class="m-6" src="images/icon-close.svg" alt="">
+      <nav class="flex flex-col mx-6 my-12 gap-5">
+        <a class="font-bold text-xl" href="#">Collections</a>
+        <a class="font-bold text-xl" href="#">Men</a>
+        <a class="font-bold text-xl" href="#">Womem</a>
+        <a class="font-bold text-xl" href="#">About</a>
+        <a class="font-bold text-xl" href="#">Contact</a>
+      </nav>
+    </div>
     <section class="relative">
-      <img class="w-full h-80" src="images/image-product-1.jpg" alt="">
-      <img class="absolute bg-white rounded-full w-15 p-3 right-10 top-1/2" src="images/icon-next.svg" alt="arrow">
-      <img class="absolute bg-white rounded-full w-15 p-3 left-10 top-1/2" src="images/icon-previous.svg" alt="arrow">
+      <!--Carrinho de compras-->
+      <div id="cart">
+      </div>
+      <img class="w-full h-80 z-20" src="images/image-product-1.jpg" alt="">
+      <img class="absolute bg-white rounded-full w-15 p-3 right-10 top-1/2 z-20" src="images/icon-next.svg" alt="arrow">
+      <img class="absolute bg-white rounded-full w-15 p-3 left-10 top-1/2 z-20" src="images/icon-previous.svg"
+        alt="arrow">
     </section>
 
     <section class="m-5">
@@ -60,31 +74,22 @@
         <h4 class="mr-5 text-lg text-gblue font-semibold line-through">$250.00</h4>
       </div>
       <div class="flex justify-between items-center m-8 mt-12">
-        <img src="images/icon-minus.svg" alt="minus">
-        <p class="font-bold text-lg">0</p>
-        <img src="images/icon-plus.svg" alt="plus">
+        <img id="menos" src="images/icon-minus.svg" alt="minus">
+        <p id="total" class="font-bold text-lg">0</p>
+        <img id="mais" src="images/icon-plus.svg" alt="plus">
       </div>
       <div class="flex justify-center">
-        <button class="relative bg-corange w-full mx-4 py-4 rounded-xl text-white font-semibold text-lg"><svg class="absolute left-1/4 top-5" width="22" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="white" fill-rule="nonzero"/></svg> Add to cart</button>
+        <button id="btn-cart" class="relative bg-corange w-full mx-4 py-4 rounded-xl text-white font-semibold text-lg"><svg
+            class="absolute left-1/4 top-5" width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+              fill="white" fill-rule="nonzero" />
+          </svg> Add to cart</button>
       </div>
     </section>
   </main>
-
-  <!-- 
-
-  
-
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>. -->
   </div>
+  <script src="main.js"></script>
 </body>
 
 </html>
