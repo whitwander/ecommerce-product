@@ -31,11 +31,11 @@ function criaCarrinho() {
 
 function acionaMenu() {
     menuIcon.addEventListener('click', () => {
-        menu.classList.remove('hidden')
+        menu.classList.remove('-left-full')
     })
 
     fecha.addEventListener('click', () => {
-        menu.classList.add('hidden')
+        menu.classList.add('-left-full')
     })
 }
 
