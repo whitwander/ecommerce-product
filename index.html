@@ -51,48 +51,62 @@
     <div id="menu" class="bg-white shadow-xl w-2/3 h-full -left-full fixed z-50 top-0 ">
       <img id="close" class="m-6" src="images/icon-close.svg" alt="">
       <nav class="flex flex-col mx-6 my-12 gap-5">
-        <a class="font-bold text-xl" href="#">Collections</a>
-        <a class="font-bold text-xl" href="#">Men</a>
-        <a class="font-bold text-xl" href="#">Womem</a>
-        <a class="font-bold text-xl" href="#">About</a>
-        <a class="font-bold text-xl" href="#">Contact</a>
+        <a class="font-bold text-lg" href="#">Collections</a>
+        <a class="font-bold text-lg" href="#">Men</a>
+        <a class="font-bold text-lg" href="#">Womem</a>
+        <a class="font-bold text-lg" href="#">About</a>
+        <a class="font-bold text-lg" href="#">Contact</a>
       </nav>
     </div>
 
     <div class="lg:flex lg:justify-center lg:items-center lg:h-auto lg:mt-40 lg:gap-20">
-      <section class="relative lg:w-1/2">
+      <section class="lg:w-1/2">
         <div id="cart" class="flex justify-center">
         </div>
-        <img class="w-full h-80 z-20 lg:rounded-xl lg:w-auto lg:h-96 lg:ml-20 lg:relative"
-          src="images/image-product-1.jpg" alt="">
-        <img class="absolute bg-white rounded-full w-15 p-3 right-10 top-1/2 z-20" src="images/icon-next.svg"
-          alt="arrow">
-        <img class="absolute bg-white rounded-full w-15 p-3 left-10 top-1/2 z-20" src="images/icon-previous.svg"
-          alt="arrow">
+        <div class="relative">
+          <div class="">
+            <img id="img1" class="w-full h-90 lg:rounded-xl lg:w-auto lg:h-96 lg:ml-20 lg:relative"
+              src="images/image-product-1.jpg" alt="">
+            <img id="img2" class="hidden w-full h-90 lg:rounded-xl lg:w-auto lg:h-96 lg:ml-20 lg:relative" src="images/image-product-2.jpg" alt="">
+            <img id="img3" class="hidden w-full h-90 lg:rounded-xl lg:w-auto lg:h-96 lg:ml-20 lg:relative" src="images/image-product-3.jpg" alt="">
+            <img id="img4" class="hidden w-full h-90 lg:rounded-xl lg:w-auto lg:h-96 lg:ml-20 lg:relative" src="images/image-product-4.jpg" alt="">
+          </div>
+          <img id="next" class="lg:hidden absolute bg-white rounded-full w-15 p-3 right-10 top-1/2 z-20 lg:-right-20"
+            src="images/icon-next.svg" alt="arrow">
+          <img id="previous" class="lg:hidden absolute bg-white rounded-full w-15 p-3 left-10 top-1/2 z-20" src="images/icon-previous.svg"
+            alt="arrow">
+        </div>
+        <div class="hidden lg:flex ml-20 mt-6 gap-5">
+          <img id="thumb1" class="rounded-xl w-20 cursor-pointer opacity-40 border-2 border-orange-900" src="images/image-product-1-thumbnail.jpg" alt="">
+          <img id="thumb2" class="rounded-xl w-20 cursor-pointer" src="images/image-product-2-thumbnail.jpg" alt="">
+          <img id="thumb3" class="rounded-xl w-20 cursor-pointer" src="images/image-product-3-thumbnail.jpg" alt="">
+          <img id="thumb4" class="rounded-xl w-20 cursor-pointer" src="images/image-product-4-thumbnail.jpg" alt="">
+        </div>
       </section>
 
       <section class="m-5 lg:w-1/2 lg:mr-20">
         <h2 class="text-corange font-bold text-sm tracking-widest">SNEAKER COMPANY</h2>
-        <h1 class="font-bold text-3xl mt-2 lg:text-5xl lg:my-5">Fall Limited Edition Sneakers</h1>
+        <h1 class="font-bold text-3xl mt-2 lg:text-5xl lg:mb-12 lg:mt-6">Fall Limited Edition Sneakers</h1>
         <p class="mt-4 text-darkgblue">These low-profile sneakers are your perfect casual wear companion. Featuring a
           durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
-        <div class="flex justify-between mt-5">
+        <div class="flex justify-between mt-5 lg:flex-col">
           <div class="flex">
             <h2 class="font-bold text-3xl">$125.00</h2>
             <h3 class="text-corange font-bold text-lg self-center ml-4">50%</h3>
           </div>
-          <h4 class="mr-5 text-lg text-gblue font-semibold line-through">$250.00</h4>
+          <h4 class="mr-5 text-lg text-gblue font-semibold line-through lg:mt-2">$250.00</h4>
         </div>
-        <div class="lg:flex lg:justify-around">
+        <div class="lg:flex lg:justify-around lg:mt-6">
           <div class="flex justify-between items-center m-8 mt-12">
             <img id="menos" src="images/icon-minus.svg" alt="minus">
-            <p id="total" class="font-bold text-lg lg:mx-6">0</p>
+            <p id="total" class="font-bold text-lg lg:mx-10">0</p>
             <img id="mais" src="images/icon-plus.svg" alt="plus">
           </div>
           <div class="flex justify-center">
             <button id="btn-cart"
               class="relative bg-corange w-full mx-4 py-4 rounded-xl text-white font-semibold text-lg lg:w-60 lg:h-14 lg:mt-8"><svg
-                class="absolute left-1/4 top-5 lg:left-10 lg:w-10" width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+                class="absolute left-1/4 top-5 lg:left-10 lg:w-10" width="22" height="20"
+                xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
                   fill="white" fill-rule="nonzero" />

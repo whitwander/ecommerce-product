@@ -26,7 +26,7 @@ function criaCarrinho() {
           </div>
         `
 
-        atualizaCliqueCarrinho()
+    atualizaCliqueCarrinho()
 }
 
 function acionaMenu() {
@@ -110,7 +110,140 @@ function pegaElementosNovos() {
 function atualizaCliqueCarrinho() {
     const cartClass = document.getElementById('cart-class')
 
-        cartIcon.addEventListener('click', () => {
-            cartClass.classList.toggle('hidden')
-        })
+    cartIcon.addEventListener('click', () => {
+        cartClass.classList.toggle('hidden')
+    })
 }
+
+//carrosel 
+let current = 0
+
+const next = document.getElementById('next')
+const previous = document.getElementById('previous')
+
+const img1 = document.getElementById('img1')
+const img2 = document.getElementById('img2')
+const img3 = document.getElementById('img3')
+const img4 = document.getElementById('img4')
+
+next.addEventListener('click', () => {
+    mudaSlide()
+})
+
+previous.addEventListener('click', () => {
+    mudaSlide()
+})
+
+
+function mudaSlide() {
+    current++
+    if (current > 4) {
+        current = 1
+    }
+
+    if (current < 1) {
+        current = 1
+    }
+
+    if (current == 1) {
+        img1.classList.remove('hidden')
+        img4.classList.add("hidden")
+        img2.classList.add('hidden')
+        img3.classList.add('hidden')
+    }
+
+    if (current == 2) {
+        img1.classList.add('hidden')
+        img2.classList.remove('hidden')
+        img3.classList.add('hidden')
+        img4.classList.add('hidden')
+    }
+
+    if (current == 3) {
+        img2.classList.add('hidden')
+        img3.classList.remove('hidden')
+        img4.classList.add('hidden')
+        img1.classList.add('hidden')
+    }
+
+    if (current == 4) {
+        img3.classList.add('hidden')
+        img4.classList.remove('hidden')
+        img2.classList.add('hidden')
+        img1.classList.add('hidden')
+    }
+}
+
+
+const thumb1 = document.getElementById("thumb1")
+const thumb2 = document.getElementById("thumb2")
+const thumb3 = document.getElementById("thumb3")
+const thumb4 = document.getElementById("thumb4")
+
+thumb1.addEventListener('click', () => {
+    current = 0
+    mudaSlide()
+    thumb1.classList.add('opacity-40')
+    thumb1.classList.add('border-2')
+    thumb1.classList.add('border-orange-900')
+    thumb3.classList.remove('opacity-40')
+    thumb3.classList.remove('border-2')
+    thumb3.classList.remove('border-orange-900')
+    thumb4.classList.remove('opacity-40')
+    thumb4.classList.remove('border-2')
+    thumb4.classList.remove('border-orange-900')
+    thumb2.classList.remove('opacity-40')
+    thumb2.classList.remove('border-2')
+    thumb2.classList.remove('border-orange-900')
+})
+
+thumb2.addEventListener('click', () => {
+    current = 1
+    mudaSlide()
+    thumb2.classList.add('opacity-40')
+    thumb2.classList.add('border-2')
+    thumb2.classList.add('border-orange-900')
+    thumb3.classList.remove('opacity-40')
+    thumb3.classList.remove('border-2')
+    thumb3.classList.remove('border-orange-900')
+    thumb4.classList.remove('opacity-40')
+    thumb4.classList.remove('border-2')
+    thumb4.classList.remove('border-orange-900')
+    thumb1.classList.remove('opacity-40')
+    thumb1.classList.remove('border-2')
+    thumb1.classList.remove('border-orange-900')
+})
+
+thumb3.addEventListener('click', () => {
+    current = 2
+    mudaSlide()
+    thumb3.classList.add('opacity-40')
+    thumb3.classList.add('border-2')
+    thumb3.classList.add('border-orange-900')
+    thumb2.classList.remove('opacity-40')
+    thumb2.classList.remove('border-2')
+    thumb2.classList.remove('border-orange-900')
+    thumb4.classList.remove('opacity-40')
+    thumb4.classList.remove('border-2')
+    thumb4.classList.remove('border-orange-900')
+    thumb1.classList.remove('opacity-40')
+    thumb1.classList.remove('border-2')
+    thumb1.classList.remove('border-orange-900')
+})
+
+thumb4.addEventListener('click', () => {
+    current = 3
+    mudaSlide()
+    thumb4.classList.add('opacity-40')
+    thumb4.classList.add('border-2')
+    thumb4.classList.add('border-orange-900')
+    thumb2.classList.remove('opacity-40')
+    thumb2.classList.remove('border-2')
+    thumb2.classList.remove('border-orange-900')
+    thumb3.classList.remove('opacity-40')
+    thumb3.classList.remove('border-2')
+    thumb3.classList.remove('border-orange-900')
+    thumb1.classList.remove('opacity-40')
+    thumb1.classList.remove('border-2')
+    thumb1.classList.remove('border-orange-900')
+})
