@@ -2,4 +2,4 @@
 
 ## Projeto Front-end Mentor utilzando HTML, TailwindCSS e JavaScript!
 
-### Deploy:
+### Deploy: https://ecommerce-product-nu.vercel.app/
