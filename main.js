@@ -18,7 +18,7 @@ criaCarrinho()
 
 function criaCarrinho() {
     cart.innerHTML = `
-        <div id="cart-class" class="hidden bg-white absolute w-4/5 m-6 h-60 z-40 rounded-xl shadow-2xl">
+        <div id="cart-class" class="hidden bg-white absolute w-4/5 lg:w-96 lg:top-10 lg:right-10 m-6 h-60 z-40 rounded-xl shadow-2xl">
           <h3 class="font-bold ml-6 my-4">Cart</h3>
           <div class="flex justify-center">
           <h4 class="font-bold mt-16 text-darkgblue">Your cart is empty.</h4>
@@ -70,7 +70,7 @@ function adicionaAoCarrinho() {
     totalPrice = quantidade * 125
 
     cart.innerHTML = `
-    <div id="cart-class" class="bg-white absolute w-4/5 m-6 h-60 z-40 rounded-xl shadow-2xl">
+    <div id="cart-class" class="bg-white absolute w-4/5 lg:w-96 lg:top-10 lg:right-10 m-6 h-60 z-40 rounded-xl shadow-2xl">
           <h3 class="font-bold ml-6 my-4">Cart</h3>
           <div class="flex justify-center gap-3 mt-10">
             <img class="w-10 rounded" src="images/image-product-1-thumbnail.jpg" alt="">
@@ -95,7 +95,7 @@ function pegaElementosNovos() {
 
     deleteTrash.addEventListener('click', () => {
         cart.innerHTML = `
-        <div id="cart-class" class="bg-white absolute w-4/5 m-6 h-60 z-40 rounded-xl shadow-2xl">
+        <div id="cart-class" class="bg-white absolute w-4/5 lg:w-96 lg:top-10 lg:right-10 m-6 h-60 z-40 rounded-xl shadow-2xl">
           <h3 class="font-bold ml-6 my-4">Cart</h3>
           <div class="flex justify-center">
           <h4 class="font-bold mt-16 text-darkgblue">Your cart is empty.</h4>
